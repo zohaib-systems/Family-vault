@@ -1,0 +1,171 @@
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.app-header h1 {
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d6deef;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 25px rgba(24, 35, 79, 0.08);
+}
+
+.panel h2,
+.panel h3 {
+  margin-top: 0;
+}
+
+.dashboard-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.auth-switch-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.dashboard-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.form-grid input {
+  border: 1px solid #c5cee2;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.generator-controls {
+  display: grid;
+  gap: 6px;
+}
+
+.generator-options {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+}
+
+.generator-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  border: 1px solid #123c89;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  background: #123c89;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #ffffff;
+  color: #123c89;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.service-list li {
+  border: 1px solid #d6deef;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.service-list-main {
+  display: grid;
+  gap: 4px;
+}
+
+.password-preview {
+  font-family: Consolas, "Courier New", monospace;
+  color: #263a68;
+}
+
+.service-list-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.error-text {
+  color: #c12f2f;
+  margin-bottom: 0;
+}
+
+.success-text {
+  color: #1c7f40;
+  margin-bottom: 0;
+}
+
+.hint-text {
+  margin-bottom: 0;
+  color: #3f4f75;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 12px;
+  }
+
+  .generator-options {
+    grid-template-columns: 1fr;
+  }
+
+  .service-list li {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .service-list-actions {
+    width: 100%;
+  }
+}
