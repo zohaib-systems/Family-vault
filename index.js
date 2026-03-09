@@ -13,7 +13,7 @@ const JWT_SECRET = process.env.JWT_SECRET || "dev-secret-change-me";
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/familyvault";
 const ENCRYPTION_SECRET = process.env.ENCRYPTION_SECRET || "dev-encryption-secret-change-me";
 const ENCRYPTION_KEY = crypto.createHash("sha256").update(ENCRYPTION_SECRET).digest();
-const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || "http://localhost:5173";
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || "https://family-vault-henna.vercel.app";
 
 app.use(express.json());
 app.use((req, res, next) => {
@@ -72,6 +72,10 @@ function authenticateToken(req, res, next) {
 
 app.get("/health", (req, res) => {
   res.send("Family Vault API is running");
+});
+
+app.get("/", (req, res) => {
+  res.send("Family Vault API is running. Use /health to verify service status.");
 });
 
 app.get("/pingdb", (req, res) => {
